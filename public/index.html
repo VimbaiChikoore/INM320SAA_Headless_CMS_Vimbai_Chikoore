@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminDashboard</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- style reset -->
+    <link href=" https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-sm-auto md-col-2 bg-dark sticky-top">
+          <div class="d-flex flex-sm-column flew-row flex-nowrap align-items-center sticky-top text-white overflow-auto">
+            
+            <a href="#" class="d-block p-3 py-5 text-decoration-none">
+              <img src="assets/images/d.png" alt="D logo" width="30" height="30" class="rounded-circle me-2 d-inline-block" style="vertical-align: middle;">
+              <span class="fs-5 d-none d-sm-inline">Dashboard kit</span>
+            </a>
+            <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto  align-items-center align-items-sm-start" id="menu">
+              <!-- Sidebar Navigation -->
+              <li class="nav-item">
+                <a href="#" class="nav-link align-middle px-0">
+                  <i class="fs-4 bi-house"></i>
+                  <img src="assets/images/overview.png" alt="pie chart icon" width="30" height="30" class="rounded-circle">
+                  <span class="ms-1 d-none d-sm-inline">Overview</span>
+                </a>
+              </li>
+              <li>
+                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                  <i class="fs-4 bi-speedometer2"></i>
+                  <img src="assets/images/tickets.png" alt="Tickets icon" width="30" height="30" class="rounded-circle">
+                  <span class="ms-1 d-none d-sm-inline">Tickets</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link px-0 align-middle">
+                  <i class="fs-4 bi-table"></i>
+                  <img src="assets/images/ideas.png" alt="lightbulb icon" width="30" height="30" class="rounded-circle">
+                  <span class="ms-1 d-none d-sm-inline">Ideas</span>
+                </a>
+              </li>
+              <li>
+                <a href="#submenu2" data-bs-toggle="person icon" class="nav-link px-0 align-middle ">
+                  <i class="fs-4 bi-bootstrap"></i>
+                  <img src="assets/images/contact.png" alt="contact" width="30" height="30" class="rounded-circle">
+                  <span class="ms-1 d-none d-sm-inline">Contacts</span>
+                </a>
+              </li>
+              <li>
+                <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                  <i class="fs-4 bi-grid"></i>
+                  <img src="assets/images/agents.png" alt="people icon" width="30" height="30" class="rounded-circle">
+                  <span class="ms-1 d-none d-sm-inline">Agents</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link px-0 align-middle">
+                  <i class="fs-4 bi-people"></i>
+                  <img src="assets/images/articles.png" alt="book icon" width="30" height="30" class="rounded-circle">
+                  <span class="ms-1 d-none d-sm-inline">Articles</span>
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#" class="nav-link px-0 align-middle">
+                  <i class="fs-4 bi-people"></i>
+                  <img src="assets/images/settings.png" alt="settings icon" width="30" height="30" class="rounded-circle">
+                  <span class="ms-1 d-none d-sm-inline">Settings</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link px-0 align-middle">
+                  <i class="fs-4 bi-people"></i>
+                  <img src="assets/images/subscription.png" alt="badge icon" width="30" height="30"
+                    class="rounded-circle">
+                  <span class="ms-1 d-none d-sm-inline">Subscription</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+          <!-- Content Section -->
+          <div class="col py-4 m-4">
+
+            <!-- Vimbai: Overview -->
+            <div class="container-fluid">
+              <div class="d-flex justify-content-between">
+
+                <div class="col-md">
+                  <p class="overview">Overview</p>
+                </div>
+
+                <!-- search button -->
+                <div class="btn-group" role="group" aria-label="user navigation">
+                  <button type="button" class="btn search" aria-label="search" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                  </svg></button>
+
+                  <button type="button" class="btn bell" aria-label="notification" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+                  </svg></button>
+
+                  <button type="button" class="btn user-name" aria-label="username" href="#">Jones Ferdinand</button>
+
+                  <button type="button" class="btn" aria-label="user profile picture" href="#"><img src="assets/images/profile-image.png" class="avatar-image d-inline img-fluid img-thumbnail rounded-circle" alt="man with mustache"></button>
+              </div>
+
+              </div>
+              <!-- end of overview section -->
+            </div>
+
+            <!-- Vimbai: Ticket status Cards -->
+            <div class="row py-3 ticket-status text-center d-flex md-flex-wrap">
+              <!-- Unresolved Card-->
+              <div class="col-lg-3 py-2">
+                <div class="card h-100 ticket-body">
+                  <div class="card-body">
+                    <h5 class="card-title ticket-name">Unresolved</h5>
+                    <p class="card-text ticket-count">60</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Overdue Card-->
+              <div class="col-lg-3 py-2">
+                <div class="card h-100 ticket-body">
+                  <div class="card-body">
+                    <h5 class="card-title ticket-name">Overdue</h5>
+                    <p class="card-text ticket-count">16</p>
+                  </div>
+                </div>
+              </div>
+            <!-- Open Card-->
+              <div class="col-lg-3 py-2">
+                <div class="card h-100 ticket-body">
+                  <div class="card-body">
+                    <h5 class="card-title ticket-name">Open</h5>
+                    <p class="card-textn ticket-count">43</p>
+                  </div>
+                </div>
+              </div>
+            <!-- On Hold Card -->
+              <div class="col-lg-3 py-2">
+                <div class="card h-100 ticket-body">
+                  <div class="card-body">
+                    <h5 class="card-title ticket-name">On hold</h5>
+                    <p class="card-text ticket-count">64</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- end of Ticket status Cards section -->
+            </div>
+
+            <!-- Vimbai: Today's Trends Section -->
+            <div class="card d-flex flex-row flex-wrap">
+              
+              <!-- Section Title -->
+              <div class="col-lg-8 card-body p-4">
+                <p class="row t-trends">Today's trends</p>
+                <img src="assets/images/trend-graph.PNG" class="img-fluid" alt="line graph">
+              </div>
+
+              <div class="trends-border d-flex flex-column justify-content-around col-sm-4 card-body py-3 px-0 text-center">
+                <!-- Resolved -->
+                <div>
+                  <h5 class="m-md-auto trend-status-name py-1">Resolved</h5>
+                  <p class="trend-status-number">449</p>
+                </div>
+                <hr>
+                <!-- Recieved -->
+                <div>
+                  <h5 class="m-sm-auto trend-status-name py-1">Recieved</h5>
+                  <p class="trend-status-number">426</p>
+                </div>
+                <hr>
+                <!-- Avg 1st res time -->
+                <div>
+                  <h5 class="m-sm-auto trend-status-name py-1">Average first response time</h5>
+                  <p class="trend-status-number">33m</p>
+                </div>
+                <hr>
+                <!-- Avg res time -->
+                <div>
+                  <h5 class="m-sm-auto trend-status-name py-1">Average response time</h5>
+                  <p class="trend-status-number">3h 8m</p>
+                </div>
+                <hr>
+                <!-- Res w/in SLA -->
+                <div>
+                  <h5 class="m-sm-auto trend-status-name py-1">Resolution within SLA</h5>
+                  <p class="trend-status-number">94%</p>
+                </div>
+
+
+              </div>
+              <!-- end of Today's Trends Section -->
+            </div>
+
+            <!-- Musa: Unresolved tickets & tasks section -->
+            <!-- UNRESOLVED TICKETS -->
+            <div class="row justify-content-between mb-4 mt-4">
+              <div class="col-lg-6 mb-4">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <h3 class="mb-0 un-tic-bold">Unresolved tickets</h3>
+                      <h5 class="view view-blue">View details</h5>
+                    </div>
+                    <div class="mb-3">
+                      <h6><span class="text-muted small-text">Group:</span> <span class="small-text">Support</span></h6>
+
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class=" un-stat list-group-item d-flex justify-content-between align-items-center">
+                        <h5>Waiting on Feature Request</h5>
+                        <h5 class="semi num-gray">4238</h5>
+                      </li>
+                      <li class="un-stat list-group-item d-flex justify-content-between align-items-center">
+                        <h5>Awaiting Customer Response</h5>
+                        <h5 class="semi num-gray">1005</h5>
+                      </li>
+                      <li class="un-stat list-group-item d-flex justify-content-between align-items-center">
+                        <h5>Awaiting Developer Fix</h5>
+                        <h5 class="semi num-gray">914</h5>
+                      </li>
+                      <li class="un-stat list-group-item d-flex justify-content-between align-items-center">
+                        <h5>Pending</h5>
+                        <h5 class="semi num-gray">281</h5>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- TASKS -->
+              <div class="col-lg-6 mb-4">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <h3 class="mb-0 un-tic-bold">Tasks</h3>
+                      <h5 class="view view-blue">View all</h5>
+                    </div>
+                    <div class="mb-3">
+                      <h6 class="text-muted num-gray">Today</h6>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <h5 class="semi num-gray un-tic-bold">Create new task</h5>
+                        <button type="button" class="plus-button">+</button>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                          <label class="form-check-label" for="flexCheckDefault">
+                            <h5 class="un-stat">Finish ticket update</h5>
+                          </label>
+                        </div>
+                        <h5 class="badge text-bg-warning"><span class="alert">URGENT</span></h5>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                          <label class="form-check-label" for="flexCheckDefault">
+                            <h5 class="un-stat">Create new ticket example</h5>
+                          </label>
+                        </div>
+                        <h5 class="badge text-bg-success"><span class="alert">NEW</span></h5>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                          <label class="form-check-label" for="flexCheckChecked">
+                            <h5 class="un-stat">Update ticket report</h5>
+                          </label>
+                        </div>
+                        <h5 class="badge text-bg-light"><span class="default">DEFAULT</span></h5>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+            <!-- end of content sectionn -->
+          </div>
+
+          <!-- end of page wrap - dont put anything past here -->
+      </div>
+
+      <!-- End of fluid container -->
+  </div>
+  
+  
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
