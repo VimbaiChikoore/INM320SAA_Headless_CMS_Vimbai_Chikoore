@@ -1,0 +1,8 @@
+{
+    "tickets":[
+        {"ticket1_name":"Unresolved", "ticket1_result":"60"},
+        {"ticket2_name":"Overdue", "ticket2_result":"16"},
+        {"ticket3_name":"Open", "ticket3_result":"43"},
+        {"ticket4_name":"On Hold", "ticket4_result":"64"}
+    ]
+}
