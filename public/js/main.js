@@ -37,7 +37,7 @@ async function update_dashboard(){
       // Creating HTML elements for ticket 4- Open
       const ticket4_data = document.createElement('div');
       ticket4_data.innerHTML = `<h5 class="card-title ticket-name">${ticket_item.ticket4_name}</h5>
-                                      <p class="card-text ticket-count">${ticket_item.ticket4_result}</p>`;
+                                <p class="card-text ticket-count">${ticket_item.ticket4_result}</p>`;
       card4_holder.append(ticket4_data);
 
     });
