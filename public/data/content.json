@@ -4,5 +4,14 @@
         {"ticket2_name":"Overdue", "ticket2_result":"16"},
         {"ticket3_name":"Open", "ticket3_result":"43"},
         {"ticket4_name":"On Hold", "ticket4_result":"64"}
+    ],
+
+    "todays_trends":[
+        {"trend1_name":"Resolved", "trend1_result":"449"},
+        {"trend2_name":"Recieved", "trend2_result":"426"},
+        {"trend3_name":"Average first response time", "trend3_result":"33m"},
+        {"trend4_name":"Average ", "trend4_result":"3h 8m"},
+        {"trend5_name":"Resolved", "trend5_result":"94%"}
+
     ]
 }

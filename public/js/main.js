@@ -1,24 +1,25 @@
-// async/await method 
+// Async/await method
 
-async function ticketStatus(){
-    try{
-        const ticket1_holder = document.getElementById('ticket1_id')
+async function update_dashboard(){
+  try {
+    const card1_holder = document.getElementById('ticket1_id');
 
-        const temp = await fetch("data/content.json")
-        const data = await temp.json();
-        
-        data.tickets.forEach(ticket_item=>{
-            const pickle = document.createElement('h5');
-            pickle.innerHTML = `<h5>${ticket_item.ticket1_name}</h5>`
-            ticket1_holder.append(pickle);
-            
-            console.log(pickle);
-        })
+    const get_data = await fetch("data/content.json");
+    const store_data = await get_data.json();
 
-    } catch(error){
-        console.log(error);
-        console.log('error')
-    }
+    store_data.tickets.forEach(ticket_item => {
+
+      // Creating HTML elements for ticket 1- Unresolved
+      const ticket1_data = document.createElement('div');
+      ticket1_data.innerHTML = `<h5 class="card-title ticket-name">${ticket_item.ticket1_name}</h5>
+                                <p class="card-text ticket-count">${ticket_item.ticket1_result}</p>`;
+      card1_holder.appendChild(ticket1_data);
+
+
+    });
+  } catch (error) {
+    console.log('error:', error);
+  }
 }
 
-ticketStatus();
+update_dashboard();
