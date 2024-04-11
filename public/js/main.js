@@ -11,9 +11,28 @@ async function update_dashboard(){
     // Ticket 4 - Open
     const card4_holder = document.getElementById('ticket4_id');
 
+    // Trend 1 Resolved
+    const trend1_holder = document.getElementById('trend1_id');
+    // Trend 2 Recieved
+    const trend2_holder = document.getElementById('trend2_id');
+    // Trend 3 Avg 1st res time
+    const trend3_holder = document.getElementById('trend3_id');
+    // Ticket 4 Avg res time 
+    const trend4_holder = document.getElementById('trend4_id');
+    // Ticket 5 Res w/in SLA 
+    const trend5_holder = document.getElementById('trend5_id');
+
+
+
+
+
+
+
     const get_data = await fetch("data/content.json");
     const store_data = await get_data.json();
 
+
+    // Loop for updating tickets
     store_data.tickets.forEach(ticket_item=> {
 
       // Creating HTML elements for ticket 1- Unresolved
@@ -41,6 +60,44 @@ async function update_dashboard(){
       card4_holder.append(ticket4_data);
 
     });
+
+
+    // Loop for updating trends
+    store_data.todays_trends.forEach(trend_item=>{
+
+      // Creating HTML elements for trend 1 - Resolved
+      const trend1_data = document.createElement('div');
+      trend1_data.innerHTML = `<h5 class="card-title ticket-name">${trend_item.trend1_name}</h5>
+                                <p class="card-text ticket-count">${trend_item.trend1_result}</p>`;
+      trend1_holder.append(trend1_data);
+
+      // Creating HTML elements for trend 2 - Recieved 
+      const trend2_data = document.createElement('div');
+      trend2_data.innerHTML = `<h5 class="card-title ticket-name">${trend_item.trend2_name}</h5>
+                                <p class="card-text ticket-count">${trend_item.trend2_result}</p>`;
+      trend2_holder.append(trend2_data);
+
+      // Creating HTML elements for trend 3 - Avg 1st res time 
+      const trend3_data = document.createElement('div');
+      trend3_data.innerHTML = `<h5 class="card-title ticket-name">${trend_item.trend3_name}</h5>
+                                <p class="card-text ticket-count">${trend_item.trend3_result}</p>`;
+      trend3_holder.append(trend3_data);
+
+      // Creating HTML elements for trend 4 - Avg res time
+      const trend4_data = document.createElement('div');
+      trend4_data.innerHTML = `<h5 class="card-title ticket-name">${trend_item.trend4_name}</h5>
+                                <p class="card-text ticket-count">${trend_item.trend4_result}</p>`;
+      trend4_holder.append(trend4_data);
+
+        // Creating HTML elements for trend 5 - Res w/in SLA
+        const trend5_data = document.createElement('div');
+        trend5_data.innerHTML = `<h5 class="card-title ticket-name">${trend_item.trend5_name}</h5>
+                                  <p class="card-text ticket-count">${trend_item.trend5_result}</p>`;
+        trend5_holder.append(trend5_data);
+      
+
+    });
+
   } catch (error) {
     console.log('error: something is wrong', error);
   }
